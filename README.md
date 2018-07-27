@@ -1,10 +1,10 @@
-#Git 简介
+# Git 简介
 
 1. 分布式版本控制系统
 2. 直接记录快照，而非差异比较
 3. 近乎所有操作都是本地执行
 
-###Git 文件的三种状态
+### Git 文件的三种状态
 
 对于任何一个文件，在 Git 内都只有三种状态
 
@@ -20,7 +20,7 @@
 2. 对修改后的文件进行快照，然后保存到暂存区域。
 3. 提交更新，将保存在暂存区域的文件快照永久转储到 Git 目录中。
 
-###Git 配置
+### Git 配置
 git config 命令
 
 1.  git config --system 系统中对所有用户都普遍适用的配置
@@ -32,14 +32,14 @@ $ git config --global user.name "ZhengJie"
 $ git config --global user.email zhengjie@ushow.media
 ```
 
-#Git 基础
+# Git 基础
 
-###别名
+### 别名
 
 推荐mac/linux使用zsh并安装[oh my zsh](http://ohmyz.sh/), 会极大方便git命令的操作
 包括git命令别名和自动补全的配置
 
-###基本操作
+### 基本操作
 
 ```
 $ git status (gst)
@@ -60,7 +60,7 @@ $ git merge
 
 ```
 
-###查看变化
+### 查看变化
 
 diff工具, mac用户推荐[Kaleidoscope](http://www.kaleidoscopeapp.com/)
 
@@ -74,7 +74,7 @@ $ git difftool --cached
 
 ```
 
-###撤销操作
+### 撤销操作
 
 ```
 $ git checkout hello.rb 撤销本地更改
@@ -96,20 +96,20 @@ $ git reset --hard commitId  从分支移除提交(危险操作)
 
 ```
 
-####修正提交
+#### 修正提交
 
 ```
 $ git commit --amend -a 修改最后一次提交
 ```
 
-###打标签
+### 打标签
 
 ```
 $ git tag -a tag_name -m 'tag comment'
 $ git push origin tag_name
 ```
 
-#Git 分支
+# Git 分支
 
 Git 中的分支，其实本质上仅仅是个指向 commit 对象的可变指针
 Git 是如何知道你当前在哪个分支上工作的呢？其实答案也很简单，它保存着一个名为 HEAD 的特别指针
@@ -119,7 +119,7 @@ $ git branch testing
 ```
 ![](git_branch.png)
 
-##分支管理
+## 分支管理
 
 ```
 $ git branch new_branch  		创建分支
@@ -129,7 +129,7 @@ $ git push origin new_branch  推送分支
 
 ```
 
-##分支合并
+## 分支合并
 
 合并分支有2种方式merge和rebase
 
@@ -160,7 +160,7 @@ $ git cherry-pick commitId  单独从别的分支提交(gcp)
 
 何时衍合，何时合并? 对短期生命的本地分支使用衍合，而对公开仓库的分支使用合并
 
-#Arcanist工具使用
+# Arcanist工具使用
 
 工作流程
 
